@@ -2,7 +2,7 @@ Vitadev Package manager
 =============
 
 VDPM is a project which aims on getting common libraries building for the PS Vita using the
-[vitasdk toolchain](https://github.com/vitasdk). It was based off the original idea of xerpi's
+[vitasdk toolchain](https://github.com/vitasdk-softfp). It was based off the original idea of xerpi's
 vita\_portlibs.
 
 
@@ -21,7 +21,7 @@ First install cmake, you can get this from [Homebrew](http://brew.sh) on Mac (`b
 and from your distro's package manager on Linux (on ubuntu: `sudo apt-get install cmake`).
 
 ```shell
-git clone https://github.com/vitasdk/vdpm
+git clone https://github.com/vitasdk-softfp/vdpm
 cd vdpm
 ./bootstrap-vitasdk.sh
 export VITASDK=/usr/local/vitasdk # define $VITASDK if you haven't already
@@ -42,7 +42,7 @@ For older versions of Windows, you should use msys2. Get it from here: https://m
 ```shell
 # Read through https://msys2.github.io/ and make sure your msys2 is up-to-date first
 pacman -S make git wget p7zip tar cmake
-git clone https://github.com/vitasdk/vdpm
+git clone https://github.com/vitasdk-softfp/vdpm
 cd vdpm
 ./bootstrap-vitasdk.sh
 export VITASDK=/usr/local/vitasdk # define $VITASDK if you haven't already
