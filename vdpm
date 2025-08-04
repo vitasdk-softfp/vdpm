@@ -80,7 +80,7 @@ get_and_extract() {
   if [ -f $1 ]; then
     tar -C $VITASDK_ROOT -Jxvf $1
   else
-    curl -sL https://github.com/vitasdk/packages/releases/download/master/$1.tar.xz | tar -C $VITASDK_ROOT -Jxvf -
+    curl -sL https://github.com/vitasdk-softfp/packages/releases/download/master/$1.tar.xz | tar -C $VITASDK_ROOT -Jxvf -
   fi
 }
 
