@@ -22,7 +22,14 @@ install_vitasdk () {
         sudo mkdir -p $INSTALLDIR
         sudo chown $USER:$(id -gn $USER) $INSTALLDIR
       fi
-      wget -O- "$(get_download_link master linux)" | tar xj -C $INSTALLDIR --strip-components=1
+      case "$(uname -m)" in
+        aarch64*)
+          wget -O- "$(get_download_link master linux-arm64)" | tar xj -C $INSTALLDIR --strip-components=1
+        ;;
+        *)
+          wget -O- "$(get_download_link master linux)" | tar xj -C $INSTALLDIR --strip-components=1
+        ;;
+      esac
      ;;
 
      MSYS*|MINGW64*)
