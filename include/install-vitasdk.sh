@@ -24,10 +24,10 @@ install_vitasdk () {
       fi
       case "$(uname -m)" in
         aarch64*)
-          wget -O- "$(get_download_link master linux-arm64)" | tar xj -C $INSTALLDIR --strip-components=1
+          wget -O- $(get_download_link master linux-arm64) | tar xj -C $INSTALLDIR --strip-components=1
         ;;
         *)
-          wget -O- "$(get_download_link master linux)" | tar xj -C $INSTALLDIR --strip-components=1
+          wget -O- $(get_download_link master linux) | tar xj -C $INSTALLDIR --strip-components=1
         ;;
       esac
      ;;
